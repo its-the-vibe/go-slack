@@ -46,10 +46,11 @@ func runMessageGet(cmd *cobra.Command, args []string) error {
 
 	// Get conversation history with the specific timestamp
 	params := &slack.GetConversationHistoryParameters{
-		ChannelID: channelID,
-		Latest:    timestamp,
-		Inclusive: true,
-		Limit:     1,
+		ChannelID:          channelID,
+		Latest:             timestamp,
+		Inclusive:          true,
+		Limit:              1,
+		IncludeAllMetadata: true,
 	}
 
 	history, err := api.GetConversationHistory(params)
