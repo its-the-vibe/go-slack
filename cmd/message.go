@@ -62,8 +62,11 @@ func runMessageGet(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("no message found with timestamp %s in channel %s", timestamp, channelID)
 	}
 
-	// Get the first message (should be the one matching our timestamp)
+	// Get the first message and verify it matches the requested timestamp
 	message := history.Messages[0]
+	if message.Timestamp != timestamp {
+		return fmt.Errorf("no message found with exact timestamp %s in channel %s", timestamp, channelID)
+	}
 
 	// Convert message to JSON and print to stdout
 	jsonData, err := json.MarshalIndent(message, "", "  ")
