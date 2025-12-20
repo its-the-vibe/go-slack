@@ -8,6 +8,9 @@
 *.so
 *.dylib
 
+# Project binary
+go-slack
+
 # Test binary, built with `go test -c`
 *.test
 
