@@ -21,6 +21,7 @@ func Execute() error {
 func init() {
 	// Add subcommands here
 	rootCmd.AddCommand(messageCmd)
+	rootCmd.AddCommand(fileCmd)
 }
 
 // getSlackToken retrieves the Slack bot token from environment variable
