@@ -1,6 +1,6 @@
 module github.com/its-the-vibe/go-slack
 
-go 1.27.0
+go 1.27.1
 
 require (
 	github.com/slack-go/slack v0.29.0
