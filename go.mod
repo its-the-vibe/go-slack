@@ -3,7 +3,7 @@ module github.com/its-the-vibe/go-slack
 go 1.27.3
 
 require (
-	github.com/slack-go/slack v0.32.0
+	github.com/slack-go/slack v0.33.0
 	github.com/spf13/cobra v1.10.2
 )
 
